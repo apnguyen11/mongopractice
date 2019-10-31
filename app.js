@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 
-mongoose.connect('mongodb://localhost:3000/mongoWorkshop', {useNewUrlParser:true})
+mongoose.connect('mongodb://localhost/mongoWorkshop')
 .then(()=> console.log('Mangoose connectd'))
 //CRUD
 app.get('/', (req, res) => {
