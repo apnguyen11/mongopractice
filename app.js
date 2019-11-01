@@ -36,8 +36,8 @@ app.post('/players/new', (req, res) => {
     .then(data => res.json(data))
     .catch(err => res.json(err))
  })
- app.delete('/', (req, res) => {
-    Players.remove(
+ app.delete('/:id', (req, res) => {
+    Players.deleteOne(
         {_id: req.params.id}
     )
     .then(dbModel => res.json(dbModel))
